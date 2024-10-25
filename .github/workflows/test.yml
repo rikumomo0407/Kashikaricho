@@ -1,0 +1,16 @@
+name: Call PHP API
+
+on:
+  workflow_dispatch:  # 手動実行
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send POST request to API
+        env:
+          API_URL: "https://example.com/api/contact" # APIのURLに置き換え
+        run: |
+          curl -X POST $API_URL \
+          -H "Content-Type: application/json" \
+          -d '{"name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
