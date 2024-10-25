@@ -1,7 +1,7 @@
 name: Call PHP API
 
 on:
-  workflow_dispatch:  # 手動実行
+  workflow_dispatch:
 
 jobs:
   call-api:
@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Send POST request to API
         env:
-          API_URL: "https://example.com/api/contact" # APIのURLに置き換え
+          API_URL: "http://rikum.starfree.jp/ContactForm/api.php"
         run: |
           curl -X POST $API_URL \
           -H "Content-Type: application/json" \
