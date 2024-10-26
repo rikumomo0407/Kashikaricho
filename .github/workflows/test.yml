@@ -11,6 +11,9 @@ jobs:
         env:
           API_URL: "http://rikum.starfree.jp/ContactForm/api.php"
         run: |
-          curl -X POST $API_URL \
-          -H "Content-Type: application/json" \
-          -d '{"isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
+          curl -X POST https://notify-api.line.me/api/notify \
+          -H "Authorization: Bearer YOUR_LINE_ACCESS_TOKEN" \
+          -F "message=テスト通知"
+          //curl -X POST $API_URL \
+          //-H "Content-Type: application/json" \
+          //-d '{"isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
