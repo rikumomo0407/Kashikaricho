@@ -13,4 +13,4 @@ jobs:
         run: |
           curl -X POST $API_URL \
           -H "Content-Type: application/json" \
-          -d '{"isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
+          -d '{"key" : "vi01nx92ixn4oprnla", "isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
