@@ -12,5 +12,5 @@ jobs:
           API_URL: "http://rikum.starfree.jp/ContactForm/api.php"
         run: |
           curl -X POST $API_URL \
-          //-H "Content-Type: application/json" \
-          //-d '{"isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
+          -H "Content-Type: application/json" \
+          -d '{"isNotification" : true, "isStorage" : false, "name": "山田 太郎", "message": "こんにちは。お問い合わせです。"}'
